@@ -1,0 +1,189 @@
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/****** FACTORY ******/
+/****** STYLES ******/
+/* checkbox */
+@font-face {
+  font-family: "ui-checkbox";
+  src: url(data:font/opentype;base64,OAUAAIQEAAABAAIAAAAAAAAAAAAAAAAAAAABAJABAAAAAExQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQVm5IgAAAAAAAAAAAAAAAAAAAAAAABYAdQBpAC0AYwBoAGUAYwBrAGIAbwB4AAAADgBSAGUAZwB1AGwAYQByAAAAFgBWAGUAcgBzAGkAbwBuACAAMQAuADAAAAAWAHUAaQAtAGMAaABlAGMAawBiAG8AeAAAAAAAAAEAAAALAIAAAwAwT1MvMg8SAjoAAAC8AAAAYGNtYXAaRsynAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZvCibg8AAAF4AAAAmGhlYWQJG1ehAAACEAAAADZoaGVhBw0DxgAAAkgAAAAkaG10eAoAALkAAAJsAAAAFGxvY2EAKABgAAACgAAAAAxtYXhwAAcAHAAAAowAAAAgbmFtZVloyOcAAAKsAAABtnBvc3QAAwAAAAAEZAAAACAAAwMAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmEAPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg5hD//f//AAAAAAAg5hD//f//AAH/4xn0AAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABALkAZwNLAygAGQAAJSImLwEmNjc2Fh8BAT4BFx4BBwEOASMqATEBqREeCrcSCBgXOxJ4AS8POhkZDhD+mgkeEgECZw4O8hc7ERIIF58B5hkNEA86Gf3CDxIAAAEAAAABAAAiuVlBXw889QALBAAAAAAA01kJvgAAAADTWQm+AAAAAANLAygAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAA0sAAQAAAAAAAAAAAAAAAAAAAAUEAAAAAAAAAAAAAAACAAAABAAAuQAAAAAACgAUAB4ATAABAAAABQAaAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEACwAAAAEAAAAAAAIABwCEAAEAAAAAAAMACwBCAAEAAAAAAAQACwCZAAEAAAAAAAUACwAhAAEAAAAAAAYACwBjAAEAAAAAAAoAGgC6AAMAAQQJAAEAFgALAAMAAQQJAAIADgCLAAMAAQQJAAMAFgBNAAMAAQQJAAQAFgCkAAMAAQQJAAUAFgAsAAMAAQQJAAYAFgBuAAMAAQQJAAoANADUdWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4VmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwdWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4dWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4UmVndWxhcgBSAGUAZwB1AGwAYQBydWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4Rm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('embedded-opentype'), url(data:application/x-font-ttf;base64,AAEAAAALAIAAAwAwT1MvMg8SAjoAAAC8AAAAYGNtYXAaRsynAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZvCibg8AAAF4AAAAmGhlYWQJG1ehAAACEAAAADZoaGVhBw0DxgAAAkgAAAAkaG10eAoAALkAAAJsAAAAFGxvY2EAKABgAAACgAAAAAxtYXhwAAcAHAAAAowAAAAgbmFtZVloyOcAAAKsAAABtnBvc3QAAwAAAAAEZAAAACAAAwMAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmEAPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg5hD//f//AAAAAAAg5hD//f//AAH/4xn0AAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABALkAZwNLAygAGQAAJSImLwEmNjc2Fh8BAT4BFx4BBwEOASMqATEBqREeCrcSCBgXOxJ4AS8POhkZDhD+mgkeEgECZw4O8hc7ERIIF58B5hkNEA86Gf3CDxIAAAEAAAABAAAiuVlBXw889QALBAAAAAAA01kJvgAAAADTWQm+AAAAAANLAygAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAA0sAAQAAAAAAAAAAAAAAAAAAAAUEAAAAAAAAAAAAAAACAAAABAAAuQAAAAAACgAUAB4ATAABAAAABQAaAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEACwAAAAEAAAAAAAIABwCEAAEAAAAAAAMACwBCAAEAAAAAAAQACwCZAAEAAAAAAAUACwAhAAEAAAAAAAYACwBjAAEAAAAAAAoAGgC6AAMAAQQJAAEAFgALAAMAAQQJAAIADgCLAAMAAQQJAAMAFgBNAAMAAQQJAAQAFgCkAAMAAQQJAAUAFgAsAAMAAQQJAAYAFgBuAAMAAQQJAAoANADUdWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4VmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwdWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4dWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4UmVndWxhcgBSAGUAZwB1AGwAYQBydWktY2hlY2tib3gAdQBpAC0AYwBoAGUAYwBrAGIAbwB4Rm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('truetype');
+}
+.ui-checkbox:before,
+.ui-checkbox-after:after {
+  content: "\e610";
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: .1875em;
+  font-style: normal;
+  font-weight: normal;
+  font-family: ui-checkbox;
+  vertical-align: middle;
+  text-align: center;
+  transition: all .2s linear;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 0 0 #ddd;
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 1.25em;
+  height: 1.25em;
+  font-size: 0.9em;
+  line-height: 1.25em;
+}
+/* checkbox-rounded */
+.ui-checkbox-rounded:before,
+.ui-checkbox-rounded-after:after {
+  border-radius: 50%;
+  width: 1.407em;
+  height: 1.407em;
+  font-size: 0.889em;
+  line-height: 1.407em;
+}
+/* checkbox:checked */
+.ui-checkbox-checked:before,
+.ui-checkbox-checked-after:after,
+input[type=checkbox]:checked + .ui-checkbox:before,
+input[type=radio]:checked + .ui-checkbox:before,
+input[type=checkbox]:checked + .ui-checkbox-after:after,
+input[type=radio]:checked + .ui-checkbox-after:after {
+  color: #000;
+  text-shadow: 0 0 0 #fff;
+  background-color: #fff;
+}
+/* checkbox:indeterminate */
+.ui-checkbox-indeterminate:before,
+.ui-checkbox-indeterminate-after:after,
+input[type=checkbox]:indeterminate + .ui-checkbox:before,
+input[type=checkbox]:indeterminate + .ui-checkbox-after:after {
+  color: #fff;
+  text-shadow: 0 0 0 #fff;
+  background-color: #007ac7;
+  content: "?";
+  font-family: sans-serif, arial;
+  font-weight: bold;
+}
+/* checkbox:disabled */
+.ui-checkbox-disabled:before,
+.ui-checkbox-disabled-after:after,
+input[type=checkbox]:disabled + .ui-checkbox:before,
+input[type=radio]:disabled + .ui-checkbox:before,
+input[type=checkbox]:disabled + .ui-checkbox-after:after,
+input[type=radio]:disabled + .ui-checkbox-after:after {
+  color: #ddd;
+  text-shadow: 0 0 0 #ddd;
+  background-color: #ddd;
+}
+/* checkbox:checked:disabled */
+.ui-checkbox-checked.ui-checkbox-disabled:before,
+.ui-checkbox-checked-after.ui-checkbox-disabled-after:after,
+input[type=checkbox]:checked:disabled + .ui-checkbox:before,
+input[type=radio]:checked:disabled + .ui-checkbox:before,
+input[type=checkbox]:checked:disabled + .ui-checkbox-after:after,
+input[type=radio]:checked:disabled + .ui-checkbox-after:after {
+  color: #fff;
+  text-shadow: 0 0 0 #fff;
+  background-color: #ddd;
+}
+/* checkbox:invalid */
+.ui-checkbox-invalid:before,
+.ui-checkbox-invalid-after:after,
+.ui-validation input[type=checkbox]:invalid + .ui-checkbox:before,
+.ui-validation input[type=radio]:invalid + .ui-checkbox:before,
+.ui-validation input[type=checkbox]:invalid + .ui-checkbox-after:after,
+.ui-validation input[type=radio]:invalid + .ui-checkbox-after:after {
+  color: #f6bfbf;
+  text-shadow: 0 0 0 #f6bfbf;
+  background-color: #f6bfbf;
+}
+/* checkbox:checked:invalid */
+.ui-checkbox-checked.ui-checkbox-invalid:before,
+.ui-checkbox-checked-after.ui-checkbox-invalid-after:after,
+.ui-validation input[type=checkbox]:checked:invalid + .ui-checkbox:before,
+.ui-validation input[type=radio]:checked:invalid + .ui-checkbox:before,
+.ui-validation input[type=checkbox]:checked:invalid + .ui-checkbox-after:after,
+.ui-validation input[type=radio]:checked:invalid + .ui-checkbox-after:after {
+  color: #fff1f1;
+  text-shadow: 0 0 0 #fff1f1;
+  background-color: #f6bfbf;
+}
+/* radio */
+.ui-radio:before,
+.ui-radio-after:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 0 solid;
+  vertical-align: middle;
+  transition: all .2s linear;
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #007ac7;
+  box-shadow: inset 0 0 0 0.125em #fff;
+  width: 1.25em;
+  height: 1.25em;
+  border-width: 0.125em;
+}
+/* radio:checked */
+.ui-radio-checked:before,
+.ui-radio-checked-after:after,
+input[type=checkbox]:checked + .ui-radio:before,
+input[type=radio]:checked + .ui-radio:before,
+input[type=checkbox]:checked + .ui-radio-after:after,
+input[type=radio]:checked + .ui-radio-after:after {
+  background-color: #007ac7;
+  border-color: #007ac7;
+  box-shadow: inset 0 0 0 0.125em #fff;
+}
+/* radio:disabled */
+.ui-radio-disabled:before,
+.ui-radio-disabled-after:after,
+input[type=checkbox]:disabled + .ui-radio:before,
+input[type=radio]:disabled + .ui-radio:before,
+input[type=checkbox]:disabled + .ui-radio-after:after,
+input[type=radio]:disabled + .ui-radio-after:after {
+  background-color: #fff;
+  border-color: #ddd;
+  box-shadow: inset 0 0 0 0.125em #fff;
+}
+/* radio:checked:disabled */
+.ui-radio-checked.ui-radio-disabled:before,
+.ui-radio-checked-after.ui-radio-disabled-after:after,
+input[type=checkbox]:checked:disabled + .ui-radio:before,
+input[type=radio]:checked:disabled + .ui-radio:before,
+input[type=checkbox]:checked:disabled + .ui-radio-after:after,
+input[type=radio]:checked:disabled + .ui-radio-after:after {
+  background-color: #ddd;
+  border-color: #ddd;
+  box-shadow: inset 0 0 0 0.125em #fff;
+}
+/* radio:invalid */
+.ui-radio-invalid:before,
+.ui-radio-invalid-after:after,
+.ui-validation input[type=checkbox]:invalid + .ui-radio:before,
+.ui-validation input[type=radio]:invalid + .ui-radio:before,
+.ui-validation input[type=checkbox]:invalid + .ui-radio-after:after,
+.ui-validation input[type=radio]:invalid + .ui-radio-after:after {
+  background-color: #fff1f1;
+  border-color: #f6bfbf;
+  box-shadow: inset 0 0 0 0.125em #fff1f1;
+}
+/* radio:checked:invalid */
+.ui-radio-checked.ui-radio-invalid:before,
+.ui-radio-checked-after.ui-radio-invalid-after:after,
+.ui-validation input[type=checkbox]:checked:invalid + .ui-radio:before,
+.ui-validation input[type=radio]:checked:invalid + .ui-radio:before,
+.ui-validation input[type=checkbox]:checked:invalid + .ui-radio-after:after,
+.ui-validation input[type=radio]:checked:invalid + .ui-radio-after:after {
+  background-color: #f6bfbf;
+  border-color: #f6bfbf;
+  box-shadow: inset 0 0 0 0.125em #fff1f1;
+}

@@ -1,0 +1,297 @@
+.content-single{
+    display: block;
+    min-height: 300px;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+
+    h2{
+        display: block;
+        font-size: 20px;
+        margin-bottom: 70px;
+        position: relative;
+        &:after{
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 130%;
+            width: 40px;
+            height: 6px;
+            background: $primary-color;
+        }
+    }
+
+
+    .item_single{
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        p{
+            font-family: $second-font;
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: normal;
+        }
+        .box-single{
+            width: 44%;
+            display: block;
+            float: left;
+            position: relative;
+            margin-right: 10%;
+            margin-bottom: 4%;
+            box-sizing: border-box;
+
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+
+            @media (max-width: 680px){
+                width: 100%;
+            }
+
+            .content-zoom{
+                display: block;
+                width: 100%;
+                overflow: hidden;
+                border: 1px solid #333;
+                height: 350px;
+            }
+
+
+            .content-buttom{
+                display: block;
+                height: 40px;
+                border-top: 3px solid $primary-color;
+                margin-top: 180px;
+                line-height: 40px;
+
+                a, h3{
+                    display: block;
+                    float: left;
+                }
+
+                h3{
+                    color: $second-color;
+                    font-size: 14px;
+                }
+                .comprar{
+                    float: right;
+                    background: $second-color - 30;
+                    color: $third-color;
+                    text-transform: uppercase;
+                    font-family: $second-font;
+                    padding: 0 10px 0 0;
+                    position: relative;
+
+                    i{
+                        width: 40px;
+                        height: 40px;
+                        float: left;
+                        line-height: 40px;
+                        text-align: center;
+                        background: $second-color;
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+
+                    &:hover{
+                        background: $second-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.content-add{
+    display: block;
+    min-height: 300px;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+
+    .item_add{
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        h2{
+            display: block;
+            background: $primary-color + 30;
+            color: $third-color;
+            text-align: center;
+            height: 27px;
+            line-height: 27px;
+        }
+
+        .box-add{
+            width: 100%;
+            overflow: hidden;
+            display: block;
+            height: auto;
+            margin-top: 40px;
+
+            .nav-filter{
+                display: block;
+                height: auto;
+
+                ul{
+                    display: flex;
+
+                    li{
+                        float: left;
+                        width: 16.666%;
+                        flex: auto;
+                        line-height: 50px;
+                        text-align: center;
+                        
+                        a{
+                            text-transform: uppercase;
+                            position: relative;
+                            display: block;
+                            font-size: 14px;
+                            color: $primary-color + 30;
+                            
+                            &:hover{
+                                color: $second-color;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    @media (max-width: 728px){
+                        display: block;
+
+                        li{
+                            flex: none;
+                            width: 48%;
+                        }
+                    }
+                }
+            }
+        }
+        .add-product{
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+            overflow: hidden;
+            position: relative;
+
+            label{
+                display: block;
+                position: absolute;
+                float: left;
+                text-transform: uppercase;
+                font-family: $second-font;
+                line-height: 30px;
+
+                .check  {
+                    float: left;
+                    border: 1px solid $second-color;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    margin: 0 0 0 10px;
+                    padding: 0;
+                }
+            }
+    
+            .item___flow{
+                width: 16.8%;
+                display: block;
+                float: left;
+                margin-right: 4%;
+                margin-bottom: 4%;
+                box-sizing: border-box;
+                
+                &:nth-child(5n){
+                    margin-right: 0;
+                }
+    
+                @media (max-width: 990px){
+                    width: 49%;
+                    margin-right: 2%;
+    
+                    &:nth-child(2n){
+                        margin-right: 0;
+                    }
+                    &:nth-child(5n){
+                        margin-right: 0%;
+                    }
+                    &:nth-child(5){
+                        margin-right: 2%;
+                    }
+                }
+    
+                @media (max-width: 550px){
+                    width: 100%;
+                    margin-bottom: 4%;
+                    margin-right:0;
+    
+                    &:nth-child(2n){
+                        margin-right: 0;
+                    }
+                    &:nth-child(5n){
+                        margin-right: 0%;
+                    }
+                }
+    
+                .content-img{
+                    width: 100%;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                    height: 190px;
+                    position: relative;
+                    border: 1px solid $primary-color;
+    
+                    @media (max-width: 550px){
+                        height: 350px;
+                    }
+    
+                    img{
+                        display: block;
+                        height: auto;
+                        width: 100%;
+    
+                        transition: all .5s;
+                        -webkit-transition: all .5s;
+    
+                        @media (max-width: 990px){
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+    
+                    &:hover img{
+                       width: 130%;
+                       
+                       @media (max-width: 990px){
+                            height: auto;
+                            width: 130%;
+                        }
+                    }
+                }
+    
+                .content-description{
+                    text-align: center;
+                    width: 100%;
+                    margin-top: 7px;
+                    line-height: 15px;
+                    h3{
+                        font-size: 11px;
+                        color: $primary-color;
+                    }
+                    p{
+                        color: $second-color;
+                    }
+                }
+            }
+        }
+    }
+}

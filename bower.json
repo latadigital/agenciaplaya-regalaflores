@@ -1,0 +1,23 @@
+{
+  "name": "Mosqueto",
+  "description": "",
+  "main": "package.js",
+  "authors": [
+    "Javier Sepulveda <javier@digitalprime.cl>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.3"
+  },
+  "devDependencies": {
+    "jquery": "1.12.3"
+  }
+}

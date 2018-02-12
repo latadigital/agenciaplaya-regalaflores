@@ -1,0 +1,191 @@
+.content-despacho{
+    display: block;
+    overflow: hidden;
+    margin: 50px auto;
+
+    h2{
+        display: block;
+        font-size: 20px;
+        margin-bottom: 70px;
+        position: relative;
+        &:after{
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 30px;
+            width: 40px;
+            height: 6px;
+            background: $primary-color;
+        }
+    }
+    
+    .item_despacho, .item_simula{
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        p{
+            font-family: $second-font;
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: normal;
+            span, a{
+                color: $primary-color;
+                font-family: $primary-font;
+            }
+            .hours{
+                display: block;
+            }
+        }
+
+        ul{
+            display: block;
+            font-family: $second-font;
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: normal;
+            li{
+                margin-bottom: 10px;
+            }
+        }
+
+        .box-despacho{
+            width: 48%;
+            display: block;
+            float: left;
+            position: relative;
+            margin-right: 4%;
+            margin-bottom: 4%;
+            box-sizing: border-box;
+
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+
+            @media (max-width: 680px){
+                width: 100%;
+            }
+        }
+
+        
+    }
+
+    .item_simula{
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        
+        .box-simula{
+            display: block;
+            width: 100%;
+            float: left;
+
+           .resultado{
+               width: 100%;
+               max-width: 200px;
+               border: 0;
+               background: $second-color + 90;
+               display: block;
+               height: 40px;
+               text-align: center;
+               line-height: 40px;
+               color: $primary-color;
+               text-transform: uppercase;
+               font-size: 20px;
+
+               span{
+                   color: $second-color;
+                   
+               }
+               @media (max-width: 680px){
+                   max-width: 100%;
+               }
+           }
+
+           .enviar{
+               margin: 0;
+               background: $second-color;
+               color: $third-color;
+
+               @media (max-width: 680px){
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+           }
+
+           ul{
+               display: flex;
+               height: auto;
+               overflow: hidden;
+               width: 100%;
+               li{
+                   flex: auto;
+                   width: 25%;
+                   float: left;
+                   @media (max-width: 960px){
+                        width: 100%;
+                        display: block;
+                        flex: none;
+                    }
+               }
+
+               @media (max-width: 960px){
+                   width: 100%;
+                   display: block;
+               }
+           }
+
+            .select-field{
+                position: relative;
+                display: block;
+                margin-right: 5%;
+                margin-bottom: 5%;
+                font-size: 13px;
+                width: 200px;
+                float: left;
+                background: $primary-color;
+
+                @media (max-width: 680px){
+                    width: 100%;
+                }
+
+                &:after{
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    font-family: FontAwesome;
+                    content: "\f107";
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    width: 30px;
+                    background: $primary-color;
+                    z-index: 5;
+                    color: $third-color;
+                }
+    
+                select{
+                    -webkit-appearance: none;
+                    height: 40px;
+                    text-align: left;
+                    padding-left: 10px;
+                    outline: none;
+                    z-index: 10;
+                    width: 100%;
+                    border: 0;
+                    background: transparent;
+                    color: $third-color;
+                    border-radius: 0;
+                    font-family: $second-font;
+                    text-transform: uppercase;
+                    position: relative;
+                }
+            }
+        }
+     
+    }
+}
+
+
+
+

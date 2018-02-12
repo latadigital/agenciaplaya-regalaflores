@@ -1,0 +1,183 @@
+.banner-salvate{
+    display: block;
+    position: relative;
+    margin-top: 0;
+    background: url(../img/bg.png);
+
+    @media (max-width: 680px){
+        padding: 80px 0 20px 0;
+    }
+
+    .title-section{
+        position: absolute;
+        bottom: 40%;
+        right: 10%;
+        width: auto;
+        z-index: 1;
+
+        @media (max-width: 880px){
+            bottom: 20%;
+        }
+
+        @media (max-width: 680px){
+            bottom: 30%;
+        }
+
+
+        h1{
+            font-size: 70px;
+            display: block;
+            position: relative;
+            color: $third-color;
+    
+            &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 75px;
+                width: 50%;
+                max-width: 200px;
+                height: 25px;
+                background: $third-color;
+                @media (max-width: 680px){
+                    height: 10px;
+                    top: 40px;
+                }
+            }
+            @media (max-width: 880px){
+                font-size: 60px;
+                margin-top: 30px;
+            }
+            @media (max-width: 680px){
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+.content-filter-salvate{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: $second-color;
+    margin-bottom: 80px;
+
+    .item_filter{
+        width: 100%;
+        border-bottom: 2px solid $primary-color;
+        height: 25px;
+        display: block;
+        margin-top: 10px;
+        line-height: 25px;
+        font-size: 12px;
+        position: relative;
+        @media (max-width: 990px){
+            height: auto;
+        }
+    
+        h3{
+            color: $primary-color;
+            float: left;
+            margin-right: 7px;
+            
+            @media (max-width: 990px){
+                display: block;
+                width: 100%;
+                height: 40px;
+                padding-left: 10px;
+                line-height: 40px;
+                position: relative;
+                background: #eeeeee;
+                cursor: pointer;
+
+                &:after{
+                    content: "\f0dd";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 40px;
+                    height: 40px;
+                    background: $second-color;
+                    text-align: center;
+                    color: $third-color;
+                    font-family: FontAwesome;
+                }    
+            }
+        }
+    
+        .filter{
+            display: flex;
+            overflow: hidden;
+            width: auto;
+            height: 25px;
+
+            @media (max-width: 990px){
+                display: block;
+                height: auto;
+                width: 100%;
+                visibility: none;
+            }
+
+            li{
+                display: block;
+                line-height: 25px;
+                float: left;
+                flex: auto;
+                @media (max-width: 990px){
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                }
+    
+                a{
+                    color: $third-color;
+                    text-transform: uppercase;
+                    background: $second-color;
+                    display: block;
+                    height: 23px;
+                    line-height: 25px;
+                    font-size: 10px;
+                    text-align: center;
+    
+                    &:hover{
+                        color: $primary-color;
+                        background: $third-color;
+                    }
+
+                    @media (max-width: 990px){
+                        width: 100%;
+                        height: 40px;
+                        line-height: 40px;
+                        padding-left: 10px;
+
+                        &:hover{
+                            color: $third-color;
+                            background: $primary-color;
+                            padding-left: 30px;
+                        }
+                    }
+                }
+
+                .salvate{
+                    color: $primary-color;
+                    text-transform: uppercase;
+                    background: $third-color;
+
+                    &:hover{
+                        background: $primary-color;
+                        color: $third-color;
+                    
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 990px){
+            height: auto;
+        }
+    }
+}
